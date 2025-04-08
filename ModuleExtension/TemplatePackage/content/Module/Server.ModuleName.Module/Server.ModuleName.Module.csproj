@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Server.Module.Framework\Server.Module.Framework.csproj" />
+    <ProjectReference Include="..\..\Server.Module.Framework\Server.Module.Framework.csproj" />
     <ProjectReference Include="..\Server.ModuleName.EndPoints\Server.ModuleName.EndPoints.csproj" />
     <ProjectReference Include="..\Server.ModuleName.Infrastructure\Server.ModuleName.Infrastructure.csproj" />
   </ItemGroup>
