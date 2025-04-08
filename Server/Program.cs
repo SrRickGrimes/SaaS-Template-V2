@@ -1,5 +1,6 @@
 using Scalar.AspNetCore;
 using FastEndpoints;
+using Server.Module.Framework.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,8 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddFastEndpoints();
+builder.Services.InstallAllModules(builder.Configuration);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
