@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DocFx", "DocFx", "{02EA681E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{73EF09C1-3E34-4DEF-A8B7-15F21EB2BE4A}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\docs\docfx.md = ..\..\docs\docfx.md
+		..\..\docs\fastendpoints.md = ..\..\docs\fastendpoints.md
 		..\..\docs\getting-started.md = ..\..\docs\getting-started.md
 		..\..\docs\introduction.md = ..\..\docs\introduction.md
 		..\..\docs\toc.yml = ..\..\docs\toc.yml
