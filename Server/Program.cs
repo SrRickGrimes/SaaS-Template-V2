@@ -2,9 +2,15 @@ using Scalar.AspNetCore;
 using FastEndpoints;
 using Server.Module.Framework.Extensions;
 using Server.Extensions;
+using Serilog;
+
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddSerilog();
 // Add services to the container.
 
 builder.Services.AddControllers();
