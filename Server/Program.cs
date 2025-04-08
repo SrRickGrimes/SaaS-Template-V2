@@ -36,4 +36,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 app.UseFastEndpoints();
+
+await app.GenerateClientCodeAsync();
+
 app.Run();

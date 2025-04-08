@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="FastEndpoints" Version="5.35.0" />
+    <PackageReference Include="FastEndpoints.ClientGen.Kiota" Version="5.35.0" />
     <PackageReference Include="FastEndpoints.Swagger" Version="5.35.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.3" />
     <PackageReference Include="NSwag.AspNetCore" Version="14.3.0" />
@@ -19,5 +20,10 @@
     <ProjectReference Include="..\Modules\Products\Server.Products.Module\Server.Products.Module.csproj" />
     <ProjectReference Include="..\Server.Module.Framework\Server.Module.Framework.csproj" />
   </ItemGroup>
+
+	<Target Name="ClientGen" AfterTargets="Build" Condition="'$(Configuration)'=='Debug'">
+		<Exec WorkingDirectory="$(RunWorkingDirectory)"
+			  Command="$(RunCommand) --generateclients true"/>
+	</Target>
 
 </Project>
