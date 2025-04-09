@@ -5,8 +5,6 @@ VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{3461765F-60A1-21BC-764E-FC799869FE2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppHost", "..\AppHost\AppHost.csproj", "{B26B30A8-CBFE-4FD8-B2BB-15A9214231E1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DocFx", "DocFx", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\docfx.json = ..\..\docfx.json
@@ -51,10 +49,6 @@ Global
 		{3461765F-60A1-21BC-764E-FC799869FE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3461765F-60A1-21BC-764E-FC799869FE2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3461765F-60A1-21BC-764E-FC799869FE2F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B26B30A8-CBFE-4FD8-B2BB-15A9214231E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B26B30A8-CBFE-4FD8-B2BB-15A9214231E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B26B30A8-CBFE-4FD8-B2BB-15A9214231E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B26B30A8-CBFE-4FD8-B2BB-15A9214231E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D2C9854D-24BB-0FBD-09AF-A52FF8516FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D2C9854D-24BB-0FBD-09AF-A52FF8516FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2C9854D-24BB-0FBD-09AF-A52FF8516FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
