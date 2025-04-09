@@ -16,8 +16,8 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<InternalsVisibleTo Include="Server.Products.Infrastructure"/>
-		<InternalsVisibleTo Include="Server.Products.EndPoints"/>
+		<InternalsVisibleTo Include="Server.Products.Infrastructure" />
+		<InternalsVisibleTo Include="Server.Products.EndPoints" />
 	</ItemGroup>
 
 </Project>

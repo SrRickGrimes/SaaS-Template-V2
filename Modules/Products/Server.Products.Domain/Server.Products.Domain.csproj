@@ -9,5 +9,6 @@
 	<ItemGroup>
 		<InternalsVisibleTo Include="Server.Products.Infrastructure"/>
 		<InternalsVisibleTo Include="Server.Products.Application"/>
+		<InternalsVisibleTo Include="Server.Products.EndPoints"/>
 	</ItemGroup>
 </Project>
