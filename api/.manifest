@@ -1,0 +1,17 @@
+{
+  "Projects": "Projects.yml",
+  "Projects.AppHost": "Projects.AppHost.yml",
+  "Projects.AppHost.ProjectPath": "Projects.AppHost.yml",
+  "Projects.Server": "Projects.Server.yml",
+  "Projects.Server.ProjectPath": "Projects.Server.yml",
+  "Server": "Server.yml",
+  "Server.EndPoints": "Server.EndPoints.yml",
+  "Server.EndPoints.GetWeatherForecastEndpoint": "Server.EndPoints.GetWeatherForecastEndpoint.yml",
+  "Server.EndPoints.GetWeatherForecastEndpoint.Configure": "Server.EndPoints.GetWeatherForecastEndpoint.yml",
+  "Server.EndPoints.GetWeatherForecastEndpoint.HandleAsync(System.Threading.CancellationToken)": "Server.EndPoints.GetWeatherForecastEndpoint.yml",
+  "Server.WeatherForecast": "Server.WeatherForecast.yml",
+  "Server.WeatherForecast.Date": "Server.WeatherForecast.yml",
+  "Server.WeatherForecast.Summary": "Server.WeatherForecast.yml",
+  "Server.WeatherForecast.TemperatureC": "Server.WeatherForecast.yml",
+  "Server.WeatherForecast.TemperatureF": "Server.WeatherForecast.yml"
+}

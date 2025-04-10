@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Server.EndPoints
+  commentId: N:Server.EndPoints
+  id: Server.EndPoints
+  children:
+  - Server.EndPoints.GetWeatherForecastEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Server.EndPoints
+  nameWithType: Server.EndPoints
+  fullName: Server.EndPoints
+  type: Namespace
+  assemblies:
+  - Server
+references:
+- uid: Server.EndPoints.GetWeatherForecastEndpoint
+  commentId: T:Server.EndPoints.GetWeatherForecastEndpoint
+  href: Server.EndPoints.GetWeatherForecastEndpoint.html
+  name: GetWeatherForecastEndpoint
+  nameWithType: GetWeatherForecastEndpoint
+  fullName: Server.EndPoints.GetWeatherForecastEndpoint

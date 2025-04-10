@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Server
+  commentId: N:Server
+  id: Server
+  children:
+  - Server.WeatherForecast
+  langs:
+  - csharp
+  - vb
+  name: Server
+  nameWithType: Server
+  fullName: Server
+  type: Namespace
+  assemblies:
+  - Server
+references:
+- uid: Server.WeatherForecast
+  commentId: T:Server.WeatherForecast
+  href: Server.WeatherForecast.html
+  name: WeatherForecast
+  nameWithType: WeatherForecast
+  fullName: Server.WeatherForecast

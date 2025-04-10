@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Ricardo Pons",
+    "classifications": ["Module", "Architecture", "Monolith"],
+    "identity": "Monolith.Module.Template",
+    "name": "Extensible Module for Monolithic Architecture",
+    "shortName": "moduleext",
+    "sourceName": "ModuleName",
+    "preferNameDirectory": false,
+    "tags": {
+      "language": "C#",
+      "type": "project"
+    },
+    "symbols": {
+      "IncludeFramework": {
+        "type": "parameter",
+        "datatype": "bool",
+        "defaultValue": "false",
+        "description": "Include the Server.Module.Framework project (only if you don't already have it)"
+      }
+    },
+    "sources": [
+      {
+        "modifiers": [
+          {
+            "condition": "(!IncludeFramework)",
+            "exclude": [
+              "Server.Module.Framework/**/*"
+            ]
+          }
+        ]
+      }
+    ],
+    "postActions": [
+      {
+        "condition": "(!IncludeFramework)",
+        "description": "Additional configuration",
+        "manualInstructions": [
+          {
+            "text": "If you already have the Server.Module.Framework in your solution, make sure to add a reference to it from the new module projects."
+          }
+        ],
+        "actionId": "CB9A6CF3-4F5C-4860-B9D2-03A574959774",
+        "continueOnError": true
+      }
+    ]
+  }

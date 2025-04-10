@@ -1,0 +1,27 @@
+### YamlMime:TableOfContent
+items:
+- uid: Projects
+  name: Projects
+  type: Namespace
+  items:
+  - uid: Projects.AppHost
+    name: AppHost
+    type: Class
+  - uid: Projects.Server
+    name: Server
+    type: Class
+- uid: Server
+  name: Server
+  type: Namespace
+  items:
+  - uid: Server.WeatherForecast
+    name: WeatherForecast
+    type: Class
+- uid: Server.EndPoints
+  name: Server.EndPoints
+  type: Namespace
+  items:
+  - uid: Server.EndPoints.GetWeatherForecastEndpoint
+    name: GetWeatherForecastEndpoint
+    type: Class
+memberLayout: SamePage

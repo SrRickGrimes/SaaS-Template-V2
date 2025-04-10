@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GetWeatherForecastEndpoint </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GetWeatherForecastEndpoint ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/SrRickGrimes/SaaS-Template-V2/new/master/apiSpec/new?filename=Server_EndPoints_GetWeatherForecastEndpoint.md&amp;value=---%0Auid%3A%20Server.EndPoints.GetWeatherForecastEndpoint%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Server.EndPoints.GetWeatherForecastEndpoint">
+
+
+
+  <h1 id="Server_EndPoints_GetWeatherForecastEndpoint" data-uid="Server.EndPoints.GetWeatherForecastEndpoint" class="text-break">
+Class GetWeatherForecastEndpoint  <a class="header-action link-secondary" title="View source" href="https://github.com/SrRickGrimes/SaaS-Template-V2/blob/master/Server/EndPoints/GetWeatherForecastEndpoint.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Server.html">Server</a>.<a class="xref" href="Server.EndPoints.html">EndPoints</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Server.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GetWeatherForecastEndpoint : EndpointWithoutRequest&lt;IEnumerable&lt;WeatherForecast&gt;&gt;, IEndpoint, IEventBus, IServiceResolverBase, INoRequest</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">BaseEndpoint</span></div>
+      <div><span class="xref">Endpoint</span>&lt;<span class="xref">EmptyRequest</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Server.WeatherForecast.html">WeatherForecast</a>&gt;&gt;</div>
+      <div><span class="xref">EndpointWithoutRequest</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Server.WeatherForecast.html">WeatherForecast</a>&gt;&gt;</div>
+      <div><span class="xref">GetWeatherForecastEndpoint</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">IEndpoint</span></div>
+      <div><span class="xref">IEventBus</span></div>
+      <div><span class="xref">IServiceResolverBase</span></div>
+      <div><span class="xref">INoRequest</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">EndpointWithoutRequest&lt;IEnumerable&lt;WeatherForecast&gt;&gt;.HandleAsync(EmptyRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">EndpointWithoutRequest&lt;IEnumerable&lt;WeatherForecast&gt;&gt;.ExecuteAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">EndpointWithoutRequest&lt;IEnumerable&lt;WeatherForecast&gt;&gt;.ExecuteAsync(EmptyRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.HandleAsync(EmptyRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.ExecuteAsync(EmptyRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.TryResolve&lt;TService&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.TryResolve(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Resolve&lt;TService&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Resolve(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.CreateScope()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.TryResolve&lt;TService&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.TryResolve(Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Resolve&lt;TService&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Resolve(Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Route&lt;T&gt;(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Query&lt;T&gt;(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.FormFileSectionsAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.FormMultipartSectionsAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.PublishAsync&lt;TEvent&gt;(TEvent, Mode, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.CreateTokenWith&lt;TService&gt;(string, Action&lt;UserPrivileges&gt;, EmptyRequest)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.ProcessorState&lt;TState&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.OnBeforeValidate(EmptyRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.OnBeforeValidateAsync(EmptyRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.OnAfterValidate(EmptyRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.OnAfterValidateAsync(EmptyRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.OnBeforeHandle(EmptyRequest)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.OnBeforeHandleAsync(EmptyRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.OnAfterHandle(EmptyRequest, IEnumerable&lt;WeatherForecast&gt;)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.OnAfterHandleAsync(EmptyRequest, IEnumerable&lt;WeatherForecast&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.OnValidationFailed()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.OnValidationFailedAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendAsync(IEnumerable&lt;WeatherForecast&gt;, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.iresult">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendResultAsync(IResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendInterceptedAsync(object, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendCreatedAtAsync&lt;TEndpoint&gt;(object, IEnumerable&lt;WeatherForecast&gt;, Http?, int?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendCreatedAtAsync(string, object, IEnumerable&lt;WeatherForecast&gt;, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendStringAsync(string, int, string, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendOkAsync(IEnumerable&lt;WeatherForecast&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendOkAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendErrorsAsync(int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendNoContentAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendNotFoundAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendUnauthorizedAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendForbiddenAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendRedirectAsync(string, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendHeadersAsync(Action&lt;IHeaderDictionary&gt;, int, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendBytesAsync(byte[], string, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.fileinfo">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendFileAsync(FileInfo, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendStreamAsync(Stream, string, long?, string, DateTimeOffset?, bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendEventStreamAsync&lt;T&gt;(string, IAsyncEnumerable&lt;T&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SendEmptyJsonObject(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.AccessControl(string, Apply?, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.AccessControl(string, params string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.AllowAnonymous(params Http[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.AllowAnonymous(string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.AllowFileUploads(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.AllowFormData(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.AuthSchemes(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Claims(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.ClaimsAll(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Delete(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Delete(string, Expression&lt;Func&lt;EmptyRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Description(Action&lt;RouteHandlerBuilder&gt;, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.DontAutoSendResponse()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.DontAutoTag()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.DontCatchExceptions()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.DontThrowIfValidationFails()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.EnableAntiforgery()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Get(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Get(string, Expression&lt;Func&lt;EmptyRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Group&lt;TEndpointGroup&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Head(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Head(string, Expression&lt;Func&lt;EmptyRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Idempotency(Action&lt;IdempotencyOptions&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Options(Action&lt;RouteHandlerBuilder&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Patch(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Patch(string, Expression&lt;Func&lt;EmptyRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Permissions(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.PermissionsAll(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Policy(Action&lt;AuthorizationPolicyBuilder&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Policies(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Post(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Post(string, Expression&lt;Func&lt;EmptyRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.PostProcessor&lt;TPostProcessor&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.PostProcessors(params IPostProcessor&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;[])</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.PreProcessor&lt;TPreProcessor&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.PreProcessors(params IPreProcessor&lt;EmptyRequest&gt;[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Put(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Put(string, Expression&lt;Func&lt;EmptyRequest, object&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.RequestBinder(IRequestBinder&lt;EmptyRequest&gt;)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.ResponseCache(int, ResponseCacheLocation, bool, string, string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.ResponseInterceptor(IResponseInterceptor)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Roles(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.RoutePrefixOverride(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Routes(params string[])</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SerializerContext&lt;TContext&gt;(TContext)</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.SerializerContext&lt;TContext&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Summary(Action&lt;EndpointSummary&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Summary(Action&lt;EndpointSummary&lt;EmptyRequest&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Summary(EndpointSummary)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Tags(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Throttle(int, double, string)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Validator&lt;TValidator&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Verbs(params Http[])</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Verbs(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Version(int, int)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.AddError(ValidationFailure)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.AddError(string, string, Severity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.AddError(Expression&lt;Func&lt;EmptyRequest, object&gt;&gt;, string, string, Severity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.ThrowError(ValidationFailure, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.ThrowError(string, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.ThrowError(Expression&lt;Func&lt;EmptyRequest, object&gt;&gt;, string, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.ThrowIfAnyErrors(int?)</a>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.User</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Response</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Config</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Env</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Logger</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.BaseURL</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.HttpMethod</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Form</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.Files</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.ResponseStarted</span>
+    </div>
+    <div>
+      <span class="xref">Endpoint&lt;EmptyRequest, IEnumerable&lt;WeatherForecast&gt;&gt;.ValidationFailed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BaseEndpoint.Verbs(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BaseEndpoint.Routes(params string[])</a>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.Group&lt;TEndpointGroup&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">BaseEndpoint.GetAclHash(string)</a>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.Definition</span>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.HttpContext</span>
+    </div>
+    <div>
+      <span class="xref">BaseEndpoint.ValidationFailures</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Server_EndPoints_GetWeatherForecastEndpoint_Configure_" data-uid="Server.EndPoints.GetWeatherForecastEndpoint.Configure*"></a>
+
+  <h3 id="Server_EndPoints_GetWeatherForecastEndpoint_Configure" data-uid="Server.EndPoints.GetWeatherForecastEndpoint.Configure">
+  Configure()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/SrRickGrimes/SaaS-Template-V2/blob/master/Server/EndPoints/GetWeatherForecastEndpoint.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>use this method to configure how the endpoint should be listening to incoming requests.</p>
+<p>HINT: it is only called once during endpoint auto registration during app startup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Configure()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Server_EndPoints_GetWeatherForecastEndpoint_HandleAsync_" data-uid="Server.EndPoints.GetWeatherForecastEndpoint.HandleAsync*"></a>
+
+  <h3 id="Server_EndPoints_GetWeatherForecastEndpoint_HandleAsync_System_Threading_CancellationToken_" data-uid="Server.EndPoints.GetWeatherForecastEndpoint.HandleAsync(System.Threading.CancellationToken)">
+  HandleAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/SrRickGrimes/SaaS-Template-V2/blob/master/Server/EndPoints/GetWeatherForecastEndpoint.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>the handler method for the endpoint. this method is called for each request received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task HandleAsync(CancellationToken ct)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ct</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>a cancellation token</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/SrRickGrimes/SaaS-Template-V2/blob/master/Server/EndPoints/GetWeatherForecastEndpoint.cs/#L5" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

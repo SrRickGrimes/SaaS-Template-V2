@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>FastEndpoints: A Modern Minimal API Framework for .NET </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="FastEndpoints: A Modern Minimal API Framework for .NET ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="fastendpoints-a-modern-minimal-api-framework-for-net">FastEndpoints: A Modern Minimal API Framework for .NET</h1>
+
+<h2 id="what-is-fastendpoints">What is FastEndpoints?</h2>
+<p>FastEndpoints is a powerful, developer-friendly API framework for .NET that provides a clean, code-first approach to building HTTP endpoints. It combines the performance benefits of minimal APIs with the organization and structure of a controller-based architecture, offering the best of both worlds.</p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li><strong>High Performance</strong>: Optimized for speed with minimal overhead</li>
+<li><strong>Minimal API Approach</strong>: Clean, focused endpoint implementation</li>
+<li><strong>Structured Organization</strong>: Each endpoint in its own class for better separation of concerns</li>
+<li><strong>Request/Response Pattern</strong>: Built-in support for strong typing of requests and responses</li>
+<li><strong>Validation</strong>: Built-in validation capabilities</li>
+<li><strong>Testing</strong>: First-class support for integration testing</li>
+<li><strong>Low Ceremony</strong>: Minimal boilerplate code required</li>
+</ul>
+<h2 id="installation-guide">Installation Guide</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Before installing FastEndpoints, ensure you have:</p>
+<ul>
+<li><strong>.NET SDK</strong>: .NET 6.0 or higher</li>
+</ul>
+<h3 id="installation-steps">Installation Steps</h3>
+<p>To create a new project and install FastEndpoints:</p>
+<pre><code class="lang-bash">dotnet new web -n MyWebApp
+cd MyWebApp
+dotnet add package FastEndpoints
+</code></pre>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="setting-up-your-application">Setting Up Your Application</h3>
+<p>First, configure your application in <code>Program.cs</code>:</p>
+<pre><code class="lang-csharp">using FastEndpoints;
+
+var bld = WebApplication.CreateBuilder();
+bld.Services.AddFastEndpoints();
+
+var app = bld.Build();
+app.UseFastEndpoints();
+app.Run();
+</code></pre>
+<h3 id="creating-your-first-endpoint">Creating Your First Endpoint</h3>
+<p>Follow these steps to create a simple endpoint:</p>
+<h4 id="1-create-a-request-dto">1. Create a Request DTO</h4>
+<pre><code class="lang-csharp">// MyRequest.cs
+public class MyRequest
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public int Age { get; set; }
+}
+</code></pre>
+<h4 id="2-create-a-response-dto">2. Create a Response DTO</h4>
+<pre><code class="lang-csharp">// MyResponse.cs
+public class MyResponse
+{
+    public string FullName { get; set; }
+    public bool IsOver18 { get; set; }
+}
+</code></pre>
+<h4 id="3-create-an-endpoint-class">3. Create an Endpoint Class</h4>
+<pre><code class="lang-csharp">// MyEndpoint.cs
+public class MyEndpoint : Endpoint&lt;MyRequest, MyResponse&gt;
+{
+    public override void Configure()
+    {
+        Post(&quot;/api/user/create&quot;);
+        AllowAnonymous();
+    }
+
+    public override async Task HandleAsync(MyRequest req, CancellationToken ct)
+    {
+        await SendAsync(new()
+        {
+            FullName = req.FirstName + &quot; &quot; + req.LastName,
+            IsOver18 = req.Age &gt; 18
+        });
+    }
+}
+</code></pre>
+<h4 id="4-run-and-test">4. Run and Test</h4>
+<p>Start your application and send a POST request to <code>/api/user/create</code> with a JSON body like:</p>
+<pre><code class="lang-json">{
+  &quot;FirstName&quot;: &quot;Marlon&quot;,
+  &quot;LastName&quot;: &quot;Brando&quot;,
+  &quot;Age&quot;: 40
+}
+</code></pre>
+<p>You should receive a response:</p>
+<pre><code class="lang-json">{
+  &quot;FullName&quot;: &quot;Marlon Brando&quot;,
+  &quot;IsOver18&quot;: true
+}
+</code></pre>
+<h2 id="understanding-endpoint-types">Understanding Endpoint Types</h2>
+<p>FastEndpoints offers four different base types for endpoints:</p>
+<ol>
+<li><p><strong>Endpoint&lt;TRequest&gt;</strong></p>
+<ul>
+<li>For endpoints with only a request DTO</li>
+<li>Can still send serializable responses</li>
+</ul>
+</li>
+<li><p><strong>Endpoint&lt;TRequest, TResponse&gt;</strong></p>
+<ul>
+<li>For endpoints with both request and response DTOs</li>
+<li>Provides strongly-typed access for testing and validation</li>
+</ul>
+</li>
+<li><p><strong>EndpointWithoutRequest</strong></p>
+<ul>
+<li>For endpoints with no request or response DTOs</li>
+<li>Can send any serializable object as response</li>
+</ul>
+</li>
+<li><p><strong>EndpointWithoutRequest&lt;TResponse&gt;</strong></p>
+<ul>
+<li>For endpoints with no request DTO but with a response DTO</li>
+</ul>
+</li>
+</ol>
+<p>You can also use <code>EmptyRequest</code> and <code>EmptyResponse</code> types:</p>
+<pre><code class="lang-csharp">public class MyEndpoint : Endpoint&lt;EmptyRequest, EmptyResponse&gt; { }
+</code></pre>
+<h3 id="fluent-generics">Fluent Generics</h3>
+<p>FastEndpoints offers a fluent syntax for endpoint definition:</p>
+<pre><code class="lang-csharp">// Equivalent of Endpoint&lt;TRequest&gt;
+public class MyEndpoint : Ep.Req&lt;MyRequest&gt;.NoRes { }
+
+// Equivalent of Endpoint&lt;TRequest,TResponse&gt;
+public class MyEndpoint : Ep.Req&lt;MyRequest&gt;.Res&lt;MyResponse&gt; { }
+
+// Equivalent of EndpointWithoutRequest
+public class MyEndpoint : Ep.NoReq.NoRes { }
+
+// Equivalent of EndpointWithoutRequest&lt;TResponse&gt;
+public class MyEndpoint : Ep.NoReq.Res&lt;MyResponse&gt; { }
+</code></pre>
+<h2 id="sending-responses">Sending Responses</h2>
+<p>There are multiple ways to send responses:</p>
+<h3 id="using-the-response-property">Using the Response Property</h3>
+<p>You can simply populate the <code>Response</code> property:</p>
+<pre><code class="lang-csharp">public override async Task HandleAsync(CancellationToken ct)
+{
+    var person = await dbContext.GetFirstPersonAsync();
+
+    Response.FullName = person.FullName;
+    Response.Age = person.Age;
+}
+</code></pre>
+<p>Or assign a new instance to it:</p>
+<pre><code class="lang-csharp">public override Task HandleAsync(CancellationToken ct)
+{
+    Response = new()
+    {
+        FullName = &quot;john doe&quot;,
+        Age = 124
+    };
+    return Task.CompletedTask;
+}
+</code></pre>
+<h3 id="using-union-types-net-7">Using Union Types (.NET 7+)</h3>
+<p>FastEndpoints supports union types for multiple possible responses:</p>
+<pre><code class="lang-csharp">public class MyEndpoint : Endpoint&lt;MyRequest, 
+                               Results&lt;Ok&lt;MyResponse&gt;, 
+                                       NotFound, 
+                                       ProblemDetails&gt;&gt;
+{
+    public override void Configure() { ... }
+
+    public override async Task&lt;Results&lt;Ok&lt;MyResponse&gt;, NotFound, ProblemDetails&gt;&gt; ExecuteAsync(
+        MyRequest req, CancellationToken ct)
+    {
+        await Task.CompletedTask; // Simulate async work
+
+        if (req.Id == 0) // Condition for a not found response
+        {
+            return TypedResults.NotFound();
+        }
+
+        if (req.Id == 1) // Condition for a problem details response
+        {
+            AddError(r =&gt; r.Id, &quot;value has to be greater than 1&quot;);
+            return new FastEndpoints.ProblemDetails(ValidationFailures);
+        }
+
+        // 200 OK response with a DTO
+        return TypedResults.Ok(new MyResponse
+        {
+            RequestedId = req.Id
+        });
+    }
+}
+</code></pre>
+<h2 id="configuring-with-attributes">Configuring with Attributes</h2>
+<p>Instead of overriding the <code>Configure()</code> method, you can use attributes:</p>
+<pre><code class="lang-csharp">[HttpPost(&quot;/my-endpoint&quot;)]
+[Authorize(Roles = &quot;Admin,Manager&quot;)]
+[PreProcessor&lt;MyProcessor&gt;]
+public class MyEndpoint : Endpoint&lt;MyRequest, MyResponse&gt;
+{
+    // ...
+}
+</code></pre>
+<p>Available attributes include:</p>
+<ul>
+<li><code>[Http{VERB}(&quot;/route&quot;)]</code> - Sets up verb and route</li>
+<li><code>[AllowAnonymous]</code> - Allows unauthenticated access</li>
+<li><code>[AllowFileUploads]</code> - Allows file uploads with multipart/form-data</li>
+<li><code>[Authorize(...)]</code> - Specifies authorization requirements</li>
+<li><code>[Group&lt;TGroup&gt;]</code> - Associates endpoint with a configuration group</li>
+<li><code>[PreProcessor&lt;TProcessor&gt;]</code> - Adds a pre-processor</li>
+<li><code>[PostProcessor&lt;TProcessor&gt;]</code> - Adds a post-processor</li>
+</ul>
+<h2 id="working-with-cancellation-tokens">Working with Cancellation Tokens</h2>
+<p>FastEndpoints provides cancellation token support for asynchronous operations:</p>
+<pre><code class="lang-csharp">public override async Task HandleAsync(MyRequest req, CancellationToken ct)
+{
+    // Pass the token to your async methods
+    var data = await _repository.GetDataAsync(ct);
+    
+    // No need to explicitly pass the token to SendAsync
+    // It automatically uses the same token from HandleAsync
+    await SendAsync(new MyResponse { ... });
+}
+</code></pre>
+<h2 id="next-steps">Next Steps</h2>
+<p>After mastering the basics:</p>
+<ol>
+<li><strong>Add validation</strong> to your request DTOs</li>
+<li><strong>Implement authorization</strong> for secure endpoints</li>
+<li><strong>Set up dependency injection</strong> for your endpoints</li>
+<li><strong>Create integration tests</strong> for your API</li>
+<li><strong>Explore more advanced features</strong> like versioning and documentation</li>
+</ol>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://github.com/FastEndpoints/FastEndpoints">Official GitHub Repository</a></li>
+<li><a href="https://fast-endpoints.com/">Documentation</a></li>
+<li><a href="https://www.nuget.org/packages/FastEndpoints/">NuGet Package</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
