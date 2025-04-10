@@ -10,9 +10,7 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddSerilog();
-// Add services to the container.
-
+builder.Services.AddSerilog(config => config.ReadFrom.Configuration(builder.Configuration));
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();

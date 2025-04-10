@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server.Products.Infrastruct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server.Products.Module", "Modules\Products\Server.Products.Module\Server.Products.Module.csproj", "{E4763C8D-B1CA-63D6-532E-D948F9AD4E14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppHost", "..\AppHost\AppHost.csproj", "{F3D3DC06-4EC0-27CF-E6EF-BE80B364D9CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{E4763C8D-B1CA-63D6-532E-D948F9AD4E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4763C8D-B1CA-63D6-532E-D948F9AD4E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4763C8D-B1CA-63D6-532E-D948F9AD4E14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3D3DC06-4EC0-27CF-E6EF-BE80B364D9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3D3DC06-4EC0-27CF-E6EF-BE80B364D9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3D3DC06-4EC0-27CF-E6EF-BE80B364D9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3D3DC06-4EC0-27CF-E6EF-BE80B364D9CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
