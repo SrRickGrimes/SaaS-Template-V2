@@ -18,7 +18,18 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.InstallAllModules(builder.Configuration);
 builder.Services.RegisterEndPoints();
-
+builder.Services.AddCors(options =>
+{
+    if (builder.Environment.IsDevelopment())
+    {
+        options.AddPolicy("DevelopmentPolicy", builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+    }
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,8 +38,9 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.UseOpenApi(c => c.Path = "/openapi/{documentName}.json");
     app.MapScalarApiReference(_ => _.Servers = []);
+    app.UseDeveloperExceptionPage();
+    app.UseCors("DevelopmentPolicy");
 }
-
 
 app.UseHttpsRedirection();
 
