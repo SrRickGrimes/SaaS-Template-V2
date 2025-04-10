@@ -12,5 +12,11 @@
     <ProjectReference Include="..\Server.Products.Infrastructure\Server.Products.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="products.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 	
 </Project>

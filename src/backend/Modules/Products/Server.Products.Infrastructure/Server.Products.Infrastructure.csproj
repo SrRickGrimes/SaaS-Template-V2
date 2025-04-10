@@ -18,6 +18,6 @@
  </ItemGroup>
 
 	<ItemGroup>
-		<InternalsVisibleTo Include="Server.Products.Module"/>
+		<InternalsVisibleTo Include="Server.Products.Module" />
 	</ItemGroup>
 </Project>
