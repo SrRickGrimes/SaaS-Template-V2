@@ -12,5 +12,11 @@
     <ProjectReference Include="..\Server.ModuleName.Infrastructure\Server.ModuleName.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="ModuleName.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 	
 </Project>

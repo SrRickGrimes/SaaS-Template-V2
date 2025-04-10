@@ -16,6 +16,7 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.InstallAllModules(builder.Configuration);
+builder.Configuration.AddEnvironmentVariables(); // we need this to read the environment variables and override the configuration of all the modules
 builder.Services.RegisterEndPoints();
 builder.Services.AddCors(options =>
 {
