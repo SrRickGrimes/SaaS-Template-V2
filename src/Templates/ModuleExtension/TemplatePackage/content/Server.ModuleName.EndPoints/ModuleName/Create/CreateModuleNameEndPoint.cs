@@ -3,30 +3,30 @@ using FastEndpoints;
 using Microsoft.AspNetCore.Http;
 using Server.ModuleName.Application.Features.Products.CreateProduct;
 
-namespace Server.ModuleName.EndPoints.CreateProduct;
+namespace Server.ModuleName.EndPoints.ModuleName.Create;
 
-public class CreateProductEndPoint : Endpoint<CreateProductRequest, CreateProductResponse>
+public class CreateModuleNameEndPoint : Endpoint<CreateModuleNameRequest, CreateModuleNameResponse>
 {
     public override void Configure()
     {
         Post("/");
-        Group<ProductGroup>();
+        Group<ModuleNameGroup>();
         AllowAnonymous();
         Description(d => d
-            .Produces<CreateProductResponse>(StatusCodes.Status201Created)
+            .Produces<CreateModuleNameResponse>(StatusCodes.Status201Created)
             .Produces(StatusCodes.Status400BadRequest)
             .Produces(StatusCodes.Status404NotFound)
             .Produces(StatusCodes.Status409Conflict));
     }
 
-    public override async Task HandleAsync(CreateProductRequest req, CancellationToken ct)
+    public override async Task HandleAsync(CreateModuleNameRequest req, CancellationToken ct)
     {
-        var command = new CreateProductCommand(req.Name, req.Description ?? "No description", req.Price, req.StockQuantity);
+        var command = new CreateModuleNameCommand(req.Name, req.Description ?? "No description", req.Price, req.StockQuantity);
         var result = await command.ExecuteAsync(ct);
 
         if (result.IsSuccess)
         {
-            var response = new CreateProductResponse(
+            var response = new CreateModuleNameResponse(
                 result.Value.Id,
                 result.Value.Name,
                 result.Value.Description,

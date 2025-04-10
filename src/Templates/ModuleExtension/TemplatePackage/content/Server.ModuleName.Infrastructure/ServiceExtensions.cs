@@ -7,7 +7,7 @@ internal static class ServiceExtensions
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
-        services.AddTransient<IProductService, ProductService>();
+        services.AddTransient<IModuleNameService, ModuleNameService>();
         return services;
     }
 }

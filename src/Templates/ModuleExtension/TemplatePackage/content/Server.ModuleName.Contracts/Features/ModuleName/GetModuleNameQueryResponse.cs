@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Server.ModuleName.Contracts.Features.GetProducts;
+namespace Server.ModuleName.Contracts.Features.ModuleName;
 
-public class GetProductsQueryResponse
+public class GetModuleNameQueryResponse
 {
 }

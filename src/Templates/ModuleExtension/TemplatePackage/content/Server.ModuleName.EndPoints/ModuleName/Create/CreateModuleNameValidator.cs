@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 
-namespace Server.ModuleName.EndPoints.CreateProduct;
+namespace Server.ModuleName.EndPoints.ModuleName.Create;
 
-internal class CreateProductValidator:AbstractValidator<CreateProductRequest>
+internal class CreateModuleNameValidator:AbstractValidator<CreateModuleNameRequest>
 {
-    public CreateProductValidator()
+    public CreateModuleNameValidator()
     {
         RuleFor(x => x.Price).GreaterThan(0);
         RuleFor(x => x.StockQuantity).GreaterThan(0);

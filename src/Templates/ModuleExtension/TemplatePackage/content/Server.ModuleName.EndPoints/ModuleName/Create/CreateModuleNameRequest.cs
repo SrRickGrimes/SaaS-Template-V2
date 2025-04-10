@@ -1,6 +1,6 @@
-﻿namespace Server.ModuleName.EndPoints.CreateProduct;
+﻿namespace Server.ModuleName.EndPoints.ModuleName.Create;
 
-public class CreateProductRequest
+public class CreateModuleNameRequest
 {
     public required string Name { get; set; }
     public string? Description { get; set; }

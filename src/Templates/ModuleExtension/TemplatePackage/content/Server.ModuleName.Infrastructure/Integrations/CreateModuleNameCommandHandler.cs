@@ -5,9 +5,9 @@ using Server.ModuleName.Domain.Interfaces;
 
 namespace Server.ModuleName.Infrastructure.Integrations;
 
-internal class CreateProductCommandHandler(IProductService productService) : CommandHandler<CreateProductCommand, Result<CreateProductCommandResponse>>
+internal class CreateModuleNameCommandHandler(IModuleNameService productService) : CommandHandler<CreateModuleNameCommand, Result<CreateModuleNameCommandResponse>>
 {
-    public override async Task<Result<CreateProductCommandResponse>> ExecuteAsync(CreateProductCommand command, CancellationToken ct = default)
+    public override async Task<Result<CreateModuleNameCommandResponse>> ExecuteAsync(CreateModuleNameCommand command, CancellationToken ct = default)
     {
         var product = await productService.CreateProductAsync(
             command.Name,
@@ -17,10 +17,10 @@ internal class CreateProductCommandHandler(IProductService productService) : Com
 
         if (product == null)
         {
-            return Result<CreateProductCommandResponse>.Error("Product creation failed");
+            return Result<CreateModuleNameCommandResponse>.Error("Product creation failed");
         }
 
-       var response = new CreateProductCommandResponse(
+       var response = new CreateModuleNameCommandResponse(
             product.Id,
             product.Name,
             product.Description,
@@ -28,6 +28,6 @@ internal class CreateProductCommandHandler(IProductService productService) : Com
             product.StockQuantity,
             product.CreatedAt);
 
-        return Result<CreateProductCommandResponse>.Success(response);
+        return Result<CreateModuleNameCommandResponse>.Success(response);
     }
 }
