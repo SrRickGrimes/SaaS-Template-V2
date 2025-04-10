@@ -23,8 +23,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Modules\Customers\Server.Customers.Module\Server.Customers.Module.csproj" />
     <ProjectReference Include="..\Modules\Products\Server.Products.Module\Server.Products.Module.csproj" />
     <ProjectReference Include="..\Server.Module.Framework\Server.Module.Framework.csproj" />
   </ItemGroup>
+
+
+	<Target Name="ClientGen" AfterTargets="Build" Condition="'$(Configuration)'=='Debug'">
+		<Exec WorkingDirectory="$(RunWorkingDirectory)" Command="$(RunCommand) --generateclients true" />
+	</Target>
 
 </Project>
