@@ -93,6 +93,7 @@ This roadmap outlines the current status of the project features, both completed
 - ✅ Microsoft Aspire configuration for development orchestration
 - ✅ Scalar API documentation integration
 - ✅ Basic module template with examples
+- ✅ Kiota Api client code generation
 
 ## Pending Features 🔜
 
