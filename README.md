@@ -77,3 +77,67 @@ An excellent alternative to Swagger UI (much better in my personal experience).
 ## Getting Started
 
 Go to the releases section where you can download the zip and the NuGet package. To install it, unzip the file and you'll have the solution ready to use.
+
+# Roadmap
+
+This roadmap outlines the current status of the project features, both completed and planned. The roadmap will be updated as development progresses.
+
+## Completed Features ✅
+
+- ✅ ASP.NET Core (.NET 9) integration
+- ✅ React Router v7 front-end setup
+- ✅ Modular Monolith architecture implementation
+- ✅ Clean Architecture template and structure
+- ✅ FastEndpoints integration for REPR pattern
+- ✅ Ardalis.Result integration for Result pattern
+- ✅ Microsoft Aspire configuration for development orchestration
+- ✅ Scalar API documentation integration
+- ✅ Basic module template with examples
+
+## Pending Features 🔜
+
+- 🔲 **Identity Module**
+  - ASP.NET Core Identity integration
+  - Username/password authentication support
+  - User management features
+
+- 🔲 **Multitenancy Module**
+  - Support for multitenancy scenarios by default
+  - Tenant isolation
+  - Tenant-specific configurations
+  - Particularly useful for SaaS products
+
+- 🔲 **Invitations Support**
+  - User registration using email invitations
+  - Invitation management system
+  - Email templates for invitations
+
+- 🔲 **Payment Module**
+  - Stripe integration
+  - Subscription management
+  - Payment processing
+  - Billing history
+
+- 🔲 **Feedback Module**
+  - System for gathering customer feedback
+  - Feedback collection forms
+  - Feedback management dashboard
+  - Analytics for customer feedback
+
+## Future Considerations
+
+Additional features that may be considered for future versions:
+
+- 🔲 **Microsoft Orleans Support**
+  - Integration with Orleans virtual actor model
+  - Distributed system capabilities
+  - Actor-based concurrency model
+- 🔲 Notifications system
+- 🔲 Integration with additional payment providers
+- 🔲 Advanced analytics dashboard
+- 🔲 Workflow automation tools
+- 🔲 Theme customization options
+
+## Contributing
+
+If you're interested in contributing to any of these features, please check the contributing guidelines in the repository.
